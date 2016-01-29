@@ -21,11 +21,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-
 //mongoose connection
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_CORGI_LAB);
+
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
