@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-// Require the User model
+// Require the Dog model
 var Dog = require('../models/dog');
 
 /* GET home page. */
