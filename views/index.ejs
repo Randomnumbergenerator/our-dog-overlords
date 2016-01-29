@@ -11,7 +11,11 @@
 
   <section>
     <h3>Dogs You Liked</h3>
-    <ul><!-- LIKED DOG NAMES/PICS CAN GO HERE --></ul>
+    <ul>
+		<% for(i =0; i < dogs.length; i++) { %>
+				<li><%= dogs[i].name %></li>
+			<% } %>
+	</ul>
   </section>
 
 <% include ./partials/footer %>
